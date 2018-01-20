@@ -6,6 +6,27 @@ import HelloPluto from "./Component/HelloPluto";
 
 import NewsFeed from './View/NewsFeed';
 
+class Container extends React.Component {
+  constructor(props) {
+    super(props);
+    this.state = { articles: [] };
+  }
+
+  componentWillMount() {
+    setTimeout(() =>
+      this.setState({ articles: ARTICLES })
+    , 3000);
+  }
+
+  render() {
+    return (
+      <NewsFeed
+        articles={this.state.articles}
+      />
+    );
+  }
+}
+
 
 const LOREM_IPSUM = 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco'
 const MY_PRECIS = 'awesomeness'
@@ -36,14 +57,7 @@ const ARTICLES = [
 
 
 
-const VIEW =
-  <div>
-    <HelloWorld2/>
-    <HelloPluto/>
-    <NewsFeed articles={ARTICLES} />
-  </div>
-
 ReactDom.render(
-  VIEW,
+  <Container/>,
   document.getElementById('root'),
 );
