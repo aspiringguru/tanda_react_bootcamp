@@ -3,24 +3,9 @@ import ReactDom from "react-dom";
 
 import HelloWorld2 from "./Component/HelloWorld";
 import HelloPluto from "./Component/HelloPluto";
-import Article from "./Component/Article"
 
+import NewsFeed from './View/NewsFeed';
 
-function NewsFeed(props) {
-  const articles = props.articles.map(article =>
-    <Article
-      description={article.description}
-      precis={article.precis}
-      key={article.id}
-      link={article.link}
-      title={article.title}
-    />
-  )
-
-  return (
-    <div>{articles}</div>
-  )
-}
 
 const LOREM_IPSUM = 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco'
 const MY_PRECIS = 'awesomeness'
