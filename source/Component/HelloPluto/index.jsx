@@ -2,8 +2,8 @@ import React from "react";
 import ReactDom from "react-dom";
 
 
-export default function HelloWorld2() {
+export default function HelloPluto() {
   return (
-    <div>Hello World</div>
+    <div>Hello Pluto</div>
   );
 }
