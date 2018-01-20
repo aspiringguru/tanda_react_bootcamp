@@ -5,6 +5,7 @@ import HelloWorld2 from "./Component/HelloWorld";
 import HelloPluto from "./Component/HelloPluto";
 import Article from "./Component/Article"
 
+
 function NewsFeed(props) {
   const articles = props.articles.map(article =>
     <Article
@@ -21,7 +22,7 @@ function NewsFeed(props) {
   )
 }
 
-const LOREM_IPSUM = 'blah blah eerg blah zzz'
+const LOREM_IPSUM = 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco'
 const MY_PRECIS = 'awesomeness'
 
 const ARTICLES = [
